@@ -86,7 +86,7 @@ You can check this by using the command `git status`. This is shown in the image
 ![git_image1.jpg](git_image1.jpg)
 
 **Step 2:** Next, use the command `git push -u origin main`
-<br> This pushes the updated version to the main repository hub, and in this case, is GitHub 
+<br> This pushes the updated version to the main repository hub, which is in this case, GitHub. 
 
 ![git_image2.jpg](git_image2.jpg)
 
