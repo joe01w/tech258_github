@@ -1,5 +1,5 @@
 # Tech 258
-## Github
+## Git
 
 #### What is version control? 
 Version control is the ability to track changes made on a project, as people and teams collaborate on projects together.
@@ -37,6 +37,9 @@ When you run git add, you specify the files or directories you want to add to th
 When you run git commit, you create a new commit containing the changes that were previously staged using git add.
 A commit in Git represents a snapshot of the repository at a particular point in time.
 
+`git commit -m "*your comment here*"`
+<br> This command is the commit command with the ability to add a comment to your changes, making documentation very easy.
+
 ### Showcase what `git log` and `git diff` do 
 
 `git log`
@@ -50,29 +53,40 @@ When you run git log, Git presents a chronological list of commits, starting wit
 This command act as a blacklisting feature, so certain files or directories in a Git repository can be ignored.
 This can be so Git doesn't recognize temporary folders, or folders with sensitive information.
 
-## Task 1: Create a program that checks if a user can watch a movie based on the users age.
+## Distributed Version Control
 
-possible film ratings are "universal", "pg", "12", "12a", "15", "18"
-<br> `film_rating = "12a"`
+### What's the difference between centralised and distributed version control?
 
-<br>Use an if statement to check for "universal" rating
-<br> `if film_rating == "universal":
-    print("all age groups can watch this film")`
-<br>Checks if the film rating is "pg"
-<br>`elif film_rating == "pg":
-    print("General viewing, but some scenes may be unsuitable for young children.")`
-<br>Checks if the film rating is "12" or "12a"
-<br>`elif film_rating == "12" or film_rating == "12a":
-    print("Films classified 12A and video works classified 12 contain material that is not generally suitable for children aged under 12. No one younger than 12 may see a 12A film in a cinema unless accompanied by an adult.")`
-<br>Checks if the film rating is "15"
-<br>`elif film_rating == "15":
-    print("No one younger than 15 may see a 15 film in a cinema.")`
-<br>Checks if the film rating is "18"
-<br>`elif film_rating == "18":
-    print("No one younger than 18 may see an 18 film in a cinema.")`
-<br>Else statement if none of the above conditions are met
-<br>`else:
-    print("This is not a correct rating, please use universal, pg, 12, 12a, 15, 18")`
+![VC_diagram2.jpg](VC_diagram2.jpg)
 
+Centralised VCs can have issues between nodes that commit at the same time. 
+As well as this, if the main repository hub is down, then no commits can be made.
 
+Distributed VCs fix these issues, by introducing separate repositories per node. 
+This gives each node a full copy of the repository, allowing offline work and faster operations. 
+Distributed VCs also excel in branching, merging, and decentralized collaboration.
+
+### What is GitHub?
+
+GitHub is an online platform built around Git, allowing distributed version control.
+It is a platform focused on collaboration, and allows people to create, store, manage and share their code. 
+
+#### Competitors of GitHub
+
+* GitLab
+* Bitbucket
+* Red Hat Ansible Automation Platform
+* Azure DevOps
+
+### How do you link a local repo to a remote repo on GitHub?
+
+**Step 1:** Ensure that you have files that you have already commited to the local repository, using `git commit -m "your comment here"`
+You can check this by using the command `git status`. This is shown in the image below.
+
+![git_image1.jpg](git_image1.jpg)
+
+**Step 2:** Next, use the command `git push -u origin main`
+<br> This pushes the updated version to the main repository hub, andin this case, is GitHub 
+
+![git_image2.jpg](git_image2.jpg)
 
