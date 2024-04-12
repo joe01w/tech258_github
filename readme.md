@@ -80,13 +80,41 @@ It is a platform focused on collaboration, and allows people to create, store, m
 
 ### How do you link a local repo to a remote repo on GitHub?
 
-**Step 1:** Ensure that you have files that you have already commited to the local repository, using `git commit -m "your comment here"`
-You can check this by using the command `git status`. This is shown in the image below.
+**Step 1:** First you need to link your local repository to the main hub repository (GitHub). 
+The GitHub website make this very clear on which commands to use.
+<br> For example, this is the chain of commands I used and below is an example image:
+<br>`git remote add origin https://github.com/joe01w/tech258_example.git`
+<br>`git branch -M main`
+<br>`git push -u origin main`
 
-![git_image1.jpg](git_image1.jpg)
+![git_screenshot.jpg](git_screenshot.jpg)
 
-**Step 2:** Next, use the command `git push -u origin main`
-<br> This pushes the updated version to the main repository hub, which is in this case, GitHub. 
+**Step 2:** Now use the `git status` command to check you have done it correctly.
 
-![git_image2.jpg](git_image2.jpg)
+**Step 3:** Now you can use commands `git add`, `git commit` *(or `git commit -m "*your comment here*"`)*
+to add and commit your work to your local repository.
 
+**Step 4:** The final step is to use `git push -u origin main`. 
+This pushes the update to GitHub, the remote repository.
+
+### How do you link a remote repo to a new local repo?
+
+**Step 1:** Create a New Repository on GitHub:
+<br>Go to GitHub and create a new repository by clicking on the "+" sign in the top right corner of the screen and selecting "New repository". 
+Follow the instructions to set up your repository, including giving it a name, description, and choosing any other settings you need.
+
+**Step 2:** Initialize a New Local Repository:
+<br>After ensuring you are in the correct directory on Git, run the following commands:
+<br>`mkdir my_project`
+<br>`cd my_project`
+<br>`git init`
+
+**Step 3:** Link Local Repository to Remote Repository:
+<br>To link your local repository to the remote repository you just created on GitHub, you'll need to add the remote URL. You can find the remote URL on your GitHub repository page. 
+Copy the URL, then in your terminal or command prompt, run:
+<br>`git remote add origin <remote_repository_URL>`
+
+**Step 4:** Verify the connection:
+<br>To verify that the remote repository is correctly linked, you can use the following command:
+<br>`git remote -v`
+<br>Now you are free to push any changes to GitHub from your newly linked local repository.
