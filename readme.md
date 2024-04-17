@@ -87,7 +87,7 @@ The GitHub website make this very clear on which commands to use.
 <br>`git branch -M main`
 <br>`git push -u origin main`
 
-![git_screenshot - Copy.jpg](git_screenshot%20-%20Copy.jpg)
+![git_screenshot.jpg](git_screenshot.jpg)
 
 **Step 2:** Now use the `git status` command to check you have done it correctly.
 
